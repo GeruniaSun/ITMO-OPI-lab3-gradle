@@ -1,0 +1,28 @@
+Testsuite: CalculatorTest
+Tests run: 14, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0,046 sec
+
+Testcase: testCalcHit[0] took 0,03 sec
+	FAILED
+For x=1.0, y=1.0, r=3
+Expected: is <true>
+     but: was <false>
+junit.framework.AssertionFailedError: For x=1.0, y=1.0, r=3
+Expected: is <true>
+     but: was <false>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at CalculatorTest.testCalcHit(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+
+Testcase: testCalcHit[1] took 0 sec
+Testcase: testCalcHit[2] took 0 sec
+Testcase: testCalcHit[3] took 0 sec
+Testcase: testCalcHit[4] took 0 sec
+Testcase: testCalcHit[5] took 0 sec
+Testcase: testCalcHit[6] took 0 sec
+Testcase: testCalcHit[7] took 0 sec
+Testcase: testCalcHit[8] took 0 sec
+Testcase: testCalcHit[9] took 0 sec
+Testcase: testCalcHit[10] took 0 sec
+Testcase: testCalcHit[11] took 0 sec
+Testcase: testCalcHit[12] took 0 sec
+Testcase: testCalcHit[13] took 0 sec

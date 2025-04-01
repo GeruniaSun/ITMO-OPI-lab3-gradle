@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="GERGERICH" name="CalculatorTest" skipped="0" tests="14" time="0.096" timestamp="2025-04-01T19:33:51">
+  <properties>
+    <property name="ant.library.dir" value="C:\Program Files\Apache Ant\apache-ant-1.10.15\lib" />
+    <property name="ant.file.type" value="file" />
+    <property name="java.specification.version" value="20" />
+    <property name="ant.project.name" value="WebLab3" />
+    <property name="sun.cpu.isalist" value="amd64" />
+    <property name="sun.jnu.encoding" value="Cp1252" />
+    <property name="junit.report.dir" value="reports" />
+    <property name="ant.file.type.WebLab3" value="file" />
+    <property name="java.class.path" value="C:\Users\brain\IdeaProjects\webITMO\WebLab3\lib\junit-4.13.jar;C:\Users\brain\IdeaProjects\webITMO\WebLab3\lib\hamcrest-3.0.jar;C:\Users\brain\IdeaProjects\webITMO\WebLab3\ant\classes;C:\Users\brain\IdeaProjects\webITMO\WebLab3\ant\test-classes;C:\Program Files\Apache Ant\apache-ant-1.10.15\lib\ant-launcher.jar;C:\Program Files\Apache Ant\apache-ant-1.10.15\lib\ant.jar;C:\Program Files\Apache Ant\apache-ant-1.10.15\lib\ant-junit.jar;C:\Program Files\Apache Ant\apache-ant-1.10.15\lib\ant-junit4.jar" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="user.variant" value="" />
+    <property name="java.vendor.url" value="https://java.oracle.com/" />
+    <property name="resources.dir" value="src/main/resources" />
+    <property name="os.name" value="Windows 11" />
+    <property name="java.vm.specification.version" value="20" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="user.country" value="RU" />
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-20\bin" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner CalculatorTest skipNonTests=false filtertrace=true haltOnError=true haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\brain\IdeaProjects\webITMO\WebLab3\reports\TEST-CalculatorTest.xml crashfile=C:\Users\brain\IdeaProjects\webITMO\WebLab3\junitvmwatcher7979077116606012335.properties propsfile=C:\Users\brain\IdeaProjects\webITMO\WebLab3\junit15631499179931883400.properties" />
+    <property name="test.classes.dir" value="ant/test-classes" />
+    <property name="jdk.debug" value="release" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="test.dir" value="src/test/java" />
+    <property name="user.home" value="C:\Users\brain" />
+    <property name="user.language" value="ru" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="web.dir" value="src/main/webapp" />
+    <property name="java.version.date" value="2023-07-18" />
+    <property name="java.home" value="C:\Program Files\Java\jdk-20" />
+    <property name="basedir" value="C:\Users\brain\IdeaProjects\webITMO\WebLab3" />
+    <property name="file.separator" value="\" />
+    <property name="java.vm.compressedOopsMode" value="Zero based" />
+    <property name="line.separator" value="&#xd;&#xa;" />
+    <property name="ant.java.version" value="20" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="doc.dir" value="ant/docs" />
+    <property name="main.dir" value="src/main/java" />
+    <property name="user.script" value="" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="java.runtime.version" value="20.0.2+9-78" />
+    <property name="user.name" value="brain" />
+    <property name="ant.file" value="C:\Users\brain\IdeaProjects\webITMO\WebLab3\build.xml" />
+    <property name="stdout.encoding" value="Cp1252" />
+    <property name="path.separator" value=";" />
+    <property name="os.version" value="10.0" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="build.web.xml" value="ant/WebLab3/WEB-INF/web.xml" />
+    <property name="file.encoding" value="UTF-8" />
+    <property name="ant.project.invoked-targets" value="test" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="build.dir" value="ant/WebLab3" />
+    <property name="ant.core.lib" value="C:\Program Files\Apache Ant\apache-ant-1.10.15\lib\ant.jar" />
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/" />
+    <property name="java.io.tmpdir" value="C:\Users\brain\AppData\Local\Temp\" />
+    <property name="junit" value="lib/junit-4.13.jar" />
+    <property name="java.version" value="20.0.2" />
+    <property name="user.dir" value="C:\Users\brain\IdeaProjects\webITMO\WebLab3" />
+    <property name="os.arch" value="amd64" />
+    <property name="build.dir.lib" value="ant/WebLab3/WEB-INF/lib" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="ant.home" value="C:\Program Files\Apache Ant\apache-ant-1.10.15\bin\.." />
+    <property name="ant.dir" value="ant" />
+    <property name="lib.dir" value="lib" />
+    <property name="sun.os.patch.level" value="" />
+    <property name="ant.file.WebLab3" value="C:\Users\brain\IdeaProjects\webITMO\WebLab3\build.xml" />
+    <property name="native.encoding" value="Cp1252" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.10.15 compiled on August 25 2024" />
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-20\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;c:\Users\brain\AppData\Local\Programs\cursor\resources\app\bin;C:\Program Files (x86)\Microsoft\Edge\Application;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-20\bin;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Users\brain\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\brain\AppData\Local\Programs\Python\Python313\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\brain\AppData\Local\Microsoft\WindowsApps;C:\Users\brain\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Program Files\MySQL\MySQL Server 8.0\bin\;C:\Users\brain\AppData\;c:\Users\brain\AppData\Local\Programs\cursor\resources\app\bin;C:\Users\brain\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\brain\AppData\Local\Programs\Python\Python313\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\brain\AppData\Local\Microsoft\WindowsApps;C:\Users\brain\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Program Files\MySQL\MySQL Server 8.0\bin\;C:\Users\brain\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\brain\AppData\Roaming\npm;C:\Users\brain\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\CLion 2024.1\bin;;C:\Program Files\JetBrains\WebStorm 2023.3.4\bin;;C:\Program Files\JetBrains\PyCharm 2024.3.1\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2024.3.2.2\bin;;C:\Users\brain\AppData\Local\Programs\cursor\resources\app\bin;C:\Program Files\Apache Ant\apache-ant-1.10.15\bin;;." />
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="stderr.encoding" value="Cp1252" />
+    <property name="java.vm.info" value="mixed mode, sharing" />
+    <property name="java.vm.version" value="20.0.2+9-78" />
+    <property name="classes.dir" value="ant/classes" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="hamcrest" value="lib/hamcrest-3.0.jar" />
+    <property name="java.class.version" value="64.0" />
+    <property name="src.dir" value="src/main" />
+    <property name="ant.project.default-target" value="build" />
+  </properties>
+  <testcase classname="CalculatorTest" name="testCalcHit[0]" time="0.019" />
+  <testcase classname="CalculatorTest" name="testCalcHit[1]" time="0.001" />
+  <testcase classname="CalculatorTest" name="testCalcHit[2]" time="0.0" />
+  <testcase classname="CalculatorTest" name="testCalcHit[3]" time="0.0" />
+  <testcase classname="CalculatorTest" name="testCalcHit[4]" time="0.0" />
+  <testcase classname="CalculatorTest" name="testCalcHit[5]" time="0.0" />
+  <testcase classname="CalculatorTest" name="testCalcHit[6]" time="0.0" />
+  <testcase classname="CalculatorTest" name="testCalcHit[7]" time="0.0" />
+  <testcase classname="CalculatorTest" name="testCalcHit[8]" time="0.0" />
+  <testcase classname="CalculatorTest" name="testCalcHit[9]" time="0.0" />
+  <testcase classname="CalculatorTest" name="testCalcHit[10]" time="0.0" />
+  <testcase classname="CalculatorTest" name="testCalcHit[11]" time="0.0" />
+  <testcase classname="CalculatorTest" name="testCalcHit[12]" time="0.001" />
+  <testcase classname="CalculatorTest" name="testCalcHit[13]" time="0.0" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
