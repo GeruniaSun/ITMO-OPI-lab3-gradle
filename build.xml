@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="WebLab3" default="build">
+    <property file="build.properties"/>
+
+    <path id="classpath">
+        <fileset dir="${lib.dir}" includes="*.jar"/>
+        <fileset dir="${main.dir}" includes="*.java"/>
+    </path>
+
+    <path id="classpath.test">
+        <pathelement location="${junit}"/>
+        <pathelement location="${hamcrest}"/>
+        <pathelement location="${classes.dir}"/>
+    </path>
+
+    <!-- подключение моднейшего антконтриба-->
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties">
+        <classpath>
+            <pathelement location="lib/ant-contrib-1.0b3.jar"/>
+        </classpath>
+    </taskdef>
+
+    <!-- ВНИМАНИЕ ТАРГЕТЫ!!!-->
+    <target name="clean">
+        <echo message="====== CLEAN STARTED ======" />
+        <delete dir="${ant.dir}"/>
+        <delete dir="${junit.report.dir}"/>
+        <echo message="====== CLEAN COMPLETED ======" />
+    </target>
+
+    <target name="compile" depends="clean">
+        <echo message="====== COMPILE STARTED ======" />
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${test.classes.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" classpathref="classpath" includeantruntime="false"/>
+        <echo message="====== COMPILE COMPLETED ======"/>
+    </target>
+
+    <target name="build" depends="compile">
+        <echo message="====== BUILD STARTED ======" />
+        <copy todir="${build.dir}">
+            <fileset dir="${web.dir}"/>
+        </copy>
+        <copy todir="${build.dir.lib}">
+            <fileset dir="${lib.dir}"/>
+        </copy>
+        <copy todir="${classes.dir}">
+            <fileset dir="${resources.dir}"/>
+        </copy>
+
+        <jar destfile="${ant.dir}/${ant.project.name}.jar">
+            <fileset dir="${classes.dir}"/>
+            <manifest>
+                <attribute name="Created-By" value="GerGerich"/>
+                <attribute name="Manifest-Version" value="1.0"/>
+                <attribute name="Main-Class" value="NoClass"/>
+            </manifest>
+        </jar>
+
+        <war destfile="${ant.dir}/${ant.project.name}.war" webxml="${build.web.xml}">
+            <fileset dir="${build.dir}"/>
+            <manifest>
+                <attribute name="Created-By" value="GerGerich"/>
+                <attribute name="Manifest-Version" value="1.0"/>
+                <attribute name="Main-Class" value="NoClass"/>
+            </manifest>
+        </war>
+        <echo message="====== BUILD COMPLETED ======" />
+    </target>
+
+    <target name="doc" depends="build">
+        <echo message="====== DOC STARTED ======"/>
+        <mkdir dir="${doc.dir}"/>
+        <javadoc destdir="${doc.dir}" sourcepath="${main.dir}">
+            <classpath>
+                <fileset dir="${lib.dir}">
+                    <include name="*.jar"/>
+                </fileset>
+                <pathelement path="${classes.dir}"/>
+            </classpath>
+        </javadoc>
+
+        <checksum file="${ant.dir}/${ant.project.name}.jar" algorithm="MD5" property="md5.hash"/>
+        <checksum file="${ant.dir}/${ant.project.name}.jar" algorithm="SHA-1" property="sha1.hash"/>
+
+        <jar destfile="${ant.dir}/${ant.project.name}.jar">
+            <fileset dir="${classes.dir}"/>
+            <manifest>
+                <attribute name="Created-By" value="GerGerich"/>
+                <attribute name="Manifest-Version" value="1.0"/>
+                <attribute name="Main-Class" value="NoClass"/>
+                <attribute name="MD5-Checksum" value="${md5.hash}"/>
+                <attribute name="SHA1-Checksum" value="${sha1.hash}"/>
+            </manifest>
+        </jar>
+        <echo message="====== DOC COMPLETED ======"/>
+    </target>
+
+    <target name="test" depends="build">
+        <echo message="====== TEST STARTED ======"/>
+        <mkdir dir="${test.classes.dir}"/>
+        <mkdir dir="${junit.report.dir}"/>
+        <javac destdir="${test.classes.dir}" srcdir="${test.dir}" includeantruntime="false" encoding="utf-8">
+            <classpath refid="classpath.test"/>
+        </javac>
+        <junit printsummary="on" haltonfailure="true" haltonerror="true" failureproperty="tests.failed">
+            <classpath>
+                <path refid="classpath.test"/>
+                <pathelement location="${test.classes.dir}"/>
+            </classpath>
+            <batchtest fork="yes" todir="${junit.report.dir}">
+                <formatter type="plain"/>
+                <fileset dir="${test.dir}" includes="*Test.java"/>
+            </batchtest>
+        </junit>
+        <echo message="====== TEST COMPLETED ======" />
+    </target>
+
+    <target name="report" depends="test">
+        <if>
+            <not>
+                <isset property="tests.failed"/>
+            </not>
+            <then>
+                <git-add/>
+                <git-commit/>
+            </then>
+        </if>
+    </target>
+
+    <!-- тут мои макродефики(мракобесики)-->
+    <macrodef name="git-add">
+        <sequential>
+            <exec executable="git" dir="${git.repo.dir}">
+                <arg value="add"/>
+                <arg value="${junit.report.dir}/*.xml"/>
+            </exec>
+        </sequential>
+    </macrodef>
+
+    <macrodef name="git-commit">
+        <sequential>
+            <tstamp>
+                <format property="commit.time" pattern="yyyy-MM-dd HH:mm:ss"/>
+            </tstamp>
+            <exec executable="git" dir="${git.repo.dir}">
+                <arg value="commit"/>
+                <arg value="-m"/>
+                <arg value="JUnit Report ${commit.time}"/>
+            </exec>
+        </sequential>
+    </macrodef>
+</project>
