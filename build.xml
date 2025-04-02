@@ -16,9 +16,17 @@
     <!-- подключение моднейшего антконтриба-->
     <taskdef resource="net/sf/antcontrib/antcontrib.properties">
         <classpath>
-            <pathelement location="lib/ant-contrib-1.0b3.jar"/>
+            <pathelement location="${lib.dir}/ant-contrib-1.0b3.jar"/>
         </classpath>
     </taskdef>
+
+<!--    <taskdef resource="org/apache/tools/ant/taskdefs/optional/ssh/antlib.xml">-->
+<!--        <classpath>-->
+<!--            <pathelement location="lib/ant-jsch-1.10.14.jar"/>-->
+<!--            <pathelement location="lib/jsch-0.1.55.jar"/>-->
+<!--        </classpath>-->
+<!--    </taskdef>-->
+
 
     <!-- ВНИМАНИЕ ТАРГЕТЫ!!!-->
     <target name="clean">
@@ -125,7 +133,65 @@
                 <git-add/>
                 <git-commit/>
             </then>
+            <else>
+                <echo message="tests failed. so, no reports" />
+            </else>
         </if>
+    </target>
+
+    <target name="xml">
+        <echo message="====== XML VALIDATION STARTED ======" />
+        <xmlvalidate lenient="true" failonerror="true">
+            <fileset dir="." includes="*.xml,**/*.xml"/>
+            <fileset dir="${web.dir}/WEB-INF" includes="*.xml"/>
+        </xmlvalidate>
+        <echo message="====== XML VALIDATION COMPLETED ======"/>
+    </target>
+
+    <target name="scp" depends="build">
+        <echo message="====== DEPLOY VIA SCP STARTED ======" />
+<!--        <scp-->
+<!--            todir="${scp.user}@${scp.host}:${scp.remote.dir}"-->
+<!--            password="${scp.pass}"-->
+<!--            trust="true">-->
+<!--            <fileset dir="dist/**/*"/> &lt;!&ndash; TODO меняй&ndash;&gt;-->
+<!--        </scp>-->
+        <echo message="====== DEPLOY VIA SCP COMPLETED ======"/>
+    </target>
+
+    <target name="env" depends="clean">
+        <echo message="====== ENV STARTED ======"/>
+        <mkdir dir="${classes.dir}"/>
+        <javac srcdir="${main.dir}" destdir="${classes.dir}" classpathref="classpath" source="${compile.version}"
+               includeantruntime="false">
+            <compilerarg line="${vm.args}"/>
+        </javac>
+        <antcall target="build"/>
+        <antcall target="scp"/>
+        <echo message="====== ENV COMPLETED ======"/>
+    </target>
+
+    <target name="history">
+        <echo message="====== HISTORY STARTED ======"/>
+        <trycatch>
+            <try>
+                <antcall target="compile" inheritAll="true"/>
+                <echo message="last version is correct!"/>
+            </try>
+            <catch>
+                <!-- ищем хешик первого коммита-->
+                <exec executable="git" outputproperty="first.rev" failonerror="true">
+                    <arg value="rev-list"/>
+                    <arg value="--max-parents=0"/>
+                    <arg value="HEAD"/>
+                </exec>
+                <property name="first.rev" value="${first.rev}.trim()"/>
+
+                <property name="lastWorking" value=""/>
+                <history-loop/>
+            </catch>
+        </trycatch>
+        <echo message="====== HISTORY COMPLETED ======"/>
     </target>
 
     <!-- тут мои макродефики(мракобесики)-->
@@ -133,7 +199,7 @@
         <sequential>
             <exec executable="git" dir="${git.repo.dir}">
                 <arg value="add"/>
-                <arg value="${junit.report.dir}/*.xml"/>
+                <arg value="${junit.report.dir}/*.txt"/>
             </exec>
         </sequential>
     </macrodef>
@@ -148,6 +214,57 @@
                 <arg value="-m"/>
                 <arg value="JUnit Report ${commit.time}"/>
             </exec>
+        </sequential>
+    </macrodef>
+
+    <macrodef name="history-loop">
+        <sequential>
+            <!-- получаем хешик текущего коммита -->
+            <exec executable="git" outputproperty="current.rev" failonerror="true">
+                <arg value="rev-parse"/>
+                <arg value="HEAD"/>
+            </exec>
+            <property name="current.rev" value="${current.rev}.trim()"/>
+            <echo message="current revision: ${current.rev}"/>
+
+            <echo message="trying compile current revision..."/>
+            <trycatch>
+                <try>
+                    <antcall target="compile"/>
+
+                    <echo message="last working revision: ${current.rev}"/>
+                    <property name="lastWorking" value="${current.rev}"/>
+
+                    <echo message="generation diff between last working and next..."/>
+                    <exec executable="bash" outputproperty="after.rev" failonerror="true">
+                        <arg value="-c"/>
+                        <arg value="git rev-list --reverse ${lastWorking}..HEAD | head -n 1"/>
+                    </exec>
+
+                    <exec executable="git" output="diff.txt" failonerror="true">
+                        <arg value="diff"/>
+                        <arg value="${lastWorking}"/>
+                        <arg value="${after.rev}"/>
+                    </exec>
+                    <echo message="diffs saved to diff.txt."/>
+                </try>
+                <catch>
+                    <if>
+                        <equals arg1="${current.rev}" arg2="${first.rev}"/>
+                        <then>
+                            <echo message="NO WORKING COMMITS IN YOUR REPO"/>
+                        </then>
+                        <else>
+                            <exec executable="git" failonerror="true">
+                                <arg value="checkout"/>
+                                <arg value="HEAD~1"/>
+                            </exec>
+
+                            <history-loop/>
+                        </else>
+                    </if>
+                </catch>
+            </trycatch>
         </sequential>
     </macrodef>
 </project>

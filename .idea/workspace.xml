@@ -5,32 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="122e6e0a-0069-4468-ae31-9cb432097aa5" name="Changes" comment="pu pu pu">
-      <change afterPath="$PROJECT_DIR$/.idea/WebLab3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebLab3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ant-contrib-1.0b3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/checker-qual-3.42.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/hamcrest-3.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jakarta.annotation-api-2.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jakarta.ejb-api-4.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jakarta.el-api-4.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jakarta.enterprise.cdi-api-3.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jakarta.faces-api-4.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jakarta.inject-api-2.0.1.MR.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jakarta.interceptor-api-2.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jakarta.transaction-api-2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-4.13.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/postgresql-42.7.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/primefaces-12.0.0-jakarta.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/CalculatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ValidatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +56,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "dev/login-page",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/brain/IdeaProjects/webITMO/WebLab3/lib",
@@ -146,6 +122,9 @@
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Logical" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="122e6e0a-0069-4468-ae31-9cb432097aa5" name="Changes" comment="" />
