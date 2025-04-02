@@ -1,0 +1,124 @@
+diff --git a/.idea/WebLab3.iml b/.idea/WebLab3.iml
+index 4157bf2..5de15e6 100644
+--- a/.idea/WebLab3.iml
++++ b/.idea/WebLab3.iml
+@@ -2,7 +2,6 @@
+ <module version="4">
+   <component name="AdditionalModuleElements">
+     <content url="file://$MODULE_DIR$" dumb="true">
+-      <sourceFolder url="file://$MODULE_DIR$/src/test" isTestSource="true" />
+       <excludeFolder url="file://$MODULE_DIR$/ant" />
+     </content>
+   </component>
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+index 52cf847..da8fd3d 100644
+--- a/.idea/workspace.xml
++++ b/.idea/workspace.xml
+@@ -5,8 +5,7 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="122e6e0a-0069-4468-ae31-9cb432097aa5" name="Changes" comment="pu pu pu">
+-      <change beforePath="$PROJECT_DIR$/.idea/WebLab3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WebLab3.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/build.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build.properties" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -40,39 +39,39 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+-    &quot;JUnit.CalculatorTest.testCalcHit.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.ValidatorTest.testValidateForm.executor&quot;: &quot;Run&quot;,
+-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.WebLab3 [clean].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.WebLab3 [compile].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.WebLab3 [install].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.WebLab3 [package].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.WebLab3 [test].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.WebLab3 [validate].executor&quot;: &quot;Run&quot;,
+-    &quot;Maven.WebLab3 [verify].executor&quot;: &quot;Run&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/brain/IdeaProjects/webITMO/WebLab3/lib&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "ASKED_ADD_EXTERNAL_FILES": "true",
++    "DefaultHtmlFileTemplate": "HTML File",
++    "JUnit.CalculatorTest.testCalcHit.executor": "Run",
++    "JUnit.ValidatorTest.testValidateForm.executor": "Run",
++    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
++    "Maven.WebLab3 [clean].executor": "Run",
++    "Maven.WebLab3 [compile].executor": "Run",
++    "Maven.WebLab3 [install].executor": "Run",
++    "Maven.WebLab3 [package].executor": "Run",
++    "Maven.WebLab3 [test].executor": "Run",
++    "Maven.WebLab3 [validate].executor": "Run",
++    "Maven.WebLab3 [verify].executor": "Run",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.git.unshallow": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "git-widget-placeholder": "master",
++    "ignore.virus.scanning.warn.message": "true",
++    "kotlin-language-version-configured": "true",
++    "last_opened_file_path": "C:/Users/brain/IdeaProjects/webITMO/WebLab3/lib",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.0",
++    "settings.editor.selected.configurable": "terminal",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\Users\brain\IdeaProjects\webITMO\WebLab3\lib" />
+diff --git a/build.xml b/build.xml
+index 6fdade9..154038e 100644
+--- a/build.xml
++++ b/build.xml
+@@ -238,7 +238,7 @@
+                     <echo message="generation diff between last working and next..."/>
+                     <exec executable="bash" outputproperty="after.rev" failonerror="true">
+                         <arg value="-c"/>
+-                        <arg value="git rev-list --reverse ${lastWorking}..HEAD | head -n 1 | tr -d '\n'"/>
++                        <arg value="git rev-list --reverse ${lastWorking}..HEAD | head -n 1"/>
+                     </exec>
+ 
+                     <exec executable="git" output="diff.txt" failonerror="true">
+@@ -255,12 +255,6 @@
+                             <echo message="NO WORKING COMMITS IN YOUR REPO"/>
+                         </then>
+                         <else>
+-                            <exec executable="git" failonerror="true">
+-                                <arg value="stash"/>
+-                                <arg value="push"/>
+-                                <arg value="-u"/>
+-                            </exec>
+-                            <echo message="checking out previous commit (HEAD~1)..."/>
+                             <exec executable="git" failonerror="true">
+                                 <arg value="checkout"/>
+                                 <arg value="HEAD~1"/>
