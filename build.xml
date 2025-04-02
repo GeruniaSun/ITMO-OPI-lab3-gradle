@@ -238,7 +238,7 @@
                     <echo message="generation diff between last working and next..."/>
                     <exec executable="bash" outputproperty="after.rev" failonerror="true">
                         <arg value="-c"/>
-                        <arg value="git rev-list --reverse ${lastWorking}..HEAD | head -n 1"/>
+                        <arg value="git rev-list --reverse ${lastWorking}..HEAD | head -n 1 | tr -d '\n'"/>
                     </exec>
 
                     <exec executable="git" output="diff.txt" failonerror="true">
@@ -255,6 +255,12 @@
                             <echo message="NO WORKING COMMITS IN YOUR REPO"/>
                         </then>
                         <else>
+                            <exec executable="git" failonerror="true">
+                                <arg value="stash"/>
+                                <arg value="push"/>
+                                <arg value="-u"/>
+                            </exec>
+                            <echo message="checking out previous commit (HEAD~1)..."/>
                             <exec executable="git" failonerror="true">
                                 <arg value="checkout"/>
                                 <arg value="HEAD~1"/>
