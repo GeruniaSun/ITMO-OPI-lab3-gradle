@@ -5,58 +5,74 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="122e6e0a-0069-4468-ae31-9cb432097aa5" name="Changes" comment="pu pu pu">
-      <change afterPath="$PROJECT_DIR$/lib/ant-jsch-1.10.14.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jsch-0.1.54.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/WEB-INF/beans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/WEB-INF/faces-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/WEB-INF/lib/ant-contrib-1.0b3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/WEB-INF/lib/checker-qual-3.42.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/WEB-INF/lib/hamcrest-3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/WEB-INF/lib/jakarta.annotation-api-2.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/WEB-INF/lib/jakarta.ejb-api-4.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/WEB-INF/lib/jakarta.el-api-4.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/WEB-INF/lib/jakarta.enterprise.cdi-api-3.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/WEB-INF/lib/jakarta.faces-api-4.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/WEB-INF/lib/jakarta.inject-api-2.0.1.MR.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/WEB-INF/lib/jakarta.interceptor-api-2.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/WEB-INF/lib/jakarta.transaction-api-2.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/WEB-INF/lib/junit-4.13.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/WEB-INF/lib/postgresql-42.7.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/WEB-INF/lib/primefaces-12.0.0-jakarta.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/index.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/main.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/resources/images/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/resources/images/itmo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/resources/images/saturday.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/resources/scripts/canvas.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/resources/scripts/clock.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/resources/scripts/fetch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/resources/scripts/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/resources/scripts/script2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/resources/scripts/table.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/resources/sounds/Drama_Queen.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/resources/sounds/bruh.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/resources/sounds/datyche.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/resources/sounds/h.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/resources/sounds/nepravilno.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/resources/sounds/nope.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/resources/sounds/oleg.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/resources/sounds/oue.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/resources/sounds/yeei.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/resources/styles/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/WebLab3/resources/styles/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/classes/db_helios.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/classes/db_local.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/test-classes/CalculatorTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ant/test-classes/ValidatorTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/TEST-CalculatorTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/TEST-ValidatorTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/diff.txt" beforeDir="false" afterPath="$PROJECT_DIR$/diff.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/classes/db_helios.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/classes/db_local.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/classes/lt/braineater/itmo/web3/beans/FormBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/classes/lt/braineater/itmo/web3/model/Attempt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/classes/lt/braineater/itmo/web3/utils/Calculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/classes/lt/braineater/itmo/web3/utils/DatabaseManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/classes/lt/braineater/itmo/web3/utils/QueryDealer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/classes/lt/braineater/itmo/web3/utils/Validator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/faces-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/lib/checker-qual-3.42.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/lib/jakarta.annotation-api-2.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/lib/jakarta.ejb-api-4.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/lib/jakarta.el-api-4.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/lib/jakarta.enterprise.cdi-api-3.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/lib/jakarta.faces-api-4.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/lib/jakarta.inject-api-2.0.1.MR.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/lib/jakarta.interceptor-api-2.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/lib/jakarta.transaction-api-2.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/lib/postgresql-42.7.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/lib/primefaces-12.0.0-jakarta.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/index.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/main.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/images/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/images/itmo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/images/saturday.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/scripts/canvas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/scripts/clock.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/scripts/fetch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/scripts/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/scripts/script2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/scripts/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/sounds/Drama_Queen.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/sounds/bruh.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/sounds/datyche.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/sounds/h.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/sounds/nepravilno.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/sounds/nope.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/sounds/oleg.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/sounds/oue.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/sounds/yeei.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/styles/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/styles/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db_helios.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db_local.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/braineater/itmo/web3/beans/FormBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/braineater/itmo/web3/model/Attempt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/braineater/itmo/web3/utils/Calculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/braineater/itmo/web3/utils/DatabaseManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/braineater/itmo/web3/utils/QueryDealer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lt/braineater/itmo/web3/utils/Validator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/CalculatorTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-CalculatorTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ValidatorTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ValidatorTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CalculatorTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ValidatorTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +146,7 @@
       <recent name="C:\Users\brain\IdeaProjects\webITMO\WebLab3\src\main\webapp\resources\styles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\brain\IdeaProjects\webITMO\WebLab3" />
       <recent name="C:\Users\brain\IdeaProjects\webITMO\WebLab3\test" />
       <recent name="C:\Users\brain\IdeaProjects\webITMO\WebLab3\ant-test" />
       <recent name="C:\Users\brain\IdeaProjects\webITMO\WebLab3\driver" />
@@ -184,6 +201,8 @@
       <updated>1733329143920</updated>
       <workItem from="1743510764538" duration="1059000" />
       <workItem from="1743511995624" duration="12541000" />
+      <workItem from="1743594240634" duration="4829000" />
+      <workItem from="1744652278776" duration="795000" />
     </task>
     <task id="LOCAL-00001" summary="pu pu pu">
       <option name="closed" value="true" />
