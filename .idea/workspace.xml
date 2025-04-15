@@ -5,79 +5,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="122e6e0a-0069-4468-ae31-9cb432097aa5" name="Changes" comment="pu pu pu">
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/WebLab3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WebLab3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diff.txt" beforeDir="false" afterPath="$PROJECT_DIR$/diff.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/beans.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/classes/db_helios.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/classes/db_local.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/classes/lt/braineater/itmo/web3/beans/FormBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/classes/lt/braineater/itmo/web3/model/Attempt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/classes/lt/braineater/itmo/web3/utils/Calculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/classes/lt/braineater/itmo/web3/utils/DatabaseManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/classes/lt/braineater/itmo/web3/utils/QueryDealer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/classes/lt/braineater/itmo/web3/utils/Validator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/faces-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/lib/checker-qual-3.42.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/lib/jakarta.annotation-api-2.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/lib/jakarta.ejb-api-4.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/lib/jakarta.el-api-4.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/lib/jakarta.enterprise.cdi-api-3.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/lib/jakarta.faces-api-4.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/lib/jakarta.inject-api-2.0.1.MR.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/lib/jakarta.interceptor-api-2.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/lib/jakarta.transaction-api-2.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/lib/postgresql-42.7.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/lib/primefaces-12.0.0-jakarta.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/index.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/main.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/images/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/images/itmo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/images/saturday.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/scripts/canvas.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/scripts/clock.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/scripts/fetch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/scripts/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/scripts/script2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/scripts/table.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/sounds/Drama_Queen.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/sounds/bruh.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/sounds/datyche.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/sounds/h.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/sounds/nepravilno.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/sounds/nope.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/sounds/oleg.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/sounds/oue.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/sounds/yeei.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/styles/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebLab3/resources/styles/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db_helios.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db_local.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lt/braineater/itmo/web3/beans/FormBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lt/braineater/itmo/web3/model/Attempt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lt/braineater/itmo/web3/utils/Calculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lt/braineater/itmo/web3/utils/DatabaseManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lt/braineater/itmo/web3/utils/QueryDealer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lt/braineater/itmo/web3/utils/Validator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/CalculatorTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-CalculatorTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-ValidatorTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/ValidatorTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/CalculatorTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ValidatorTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="WebLab3" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="WebLab3" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="WebLab3" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="WebLab3" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="WebLab3" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -105,39 +95,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JUnit.CalculatorTest.testCalcHit.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ValidatorTest.testValidateForm.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.WebLab3 [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.WebLab3 [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.WebLab3 [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.WebLab3 [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.WebLab3 [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.WebLab3 [validate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.WebLab3 [verify].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/brain/IdeaProjects/webITMO/WebLab3/lib&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Gradle.WebLab3 [build].executor": "Run",
+    "Gradle.WebLab3 [check].executor": "Run",
+    "Gradle.WebLab3 [clean].executor": "Run",
+    "Gradle.WebLab3 [compileJava].executor": "Run",
+    "Gradle.WebLab3 [compileTestJava].executor": "Run",
+    "Gradle.WebLab3 [compile].executor": "Run",
+    "Gradle.WebLab3 [help].executor": "Run",
+    "Gradle.WebLab3 [jar].executor": "Run",
+    "Gradle.WebLab3 [javadoc].executor": "Run",
+    "Gradle.WebLab3 [tasks].executor": "Run",
+    "Gradle.WebLab3 [test].executor": "Run",
+    "JUnit.CalculatorTest.testCalcHit.executor": "Run",
+    "JUnit.ValidatorTest.testValidateForm.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven.WebLab3 [clean].executor": "Run",
+    "Maven.WebLab3 [compile].executor": "Run",
+    "Maven.WebLab3 [install].executor": "Run",
+    "Maven.WebLab3 [package].executor": "Run",
+    "Maven.WebLab3 [test].executor": "Run",
+    "Maven.WebLab3 [validate].executor": "Run",
+    "Maven.WebLab3 [verify].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "gradle",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/brain/IdeaProjects/webITMO/WebLab3/lib",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "terminal",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\brain\IdeaProjects\webITMO\WebLab3\lib" />
@@ -152,31 +153,130 @@
       <recent name="C:\Users\brain\IdeaProjects\webITMO\WebLab3\driver" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ValidatorTest.testValidateForm">
-    <configuration name="CalculatorTest.testCalcHit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="WebLab3" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CalculatorTest" />
-      <option name="METHOD_NAME" value="testCalcHit" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle clean --warning-mode" />
+      <command value="gradle clean --warning-mode all" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.WebLab3 [jar]">
+    <configuration name="WebLab3 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
     </configuration>
-    <configuration name="ValidatorTest.testValidateForm" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="WebLab3" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ValidatorTest" />
-      <option name="METHOD_NAME" value="testValidateForm" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="WebLab3 [check]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="check" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="WebLab3 [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="WebLab3 [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="WebLab3 [war]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="war" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ValidatorTest.testValidateForm" />
-        <item itemvalue="JUnit.CalculatorTest.testCalcHit" />
+        <item itemvalue="Gradle.WebLab3 [jar]" />
+        <item itemvalue="Gradle.WebLab3 [build]" />
+        <item itemvalue="Gradle.WebLab3 [clean]" />
+        <item itemvalue="Gradle.WebLab3 [war]" />
+        <item itemvalue="Gradle.WebLab3 [check]" />
       </list>
     </recent_temporary>
   </component>
@@ -203,6 +303,8 @@
       <workItem from="1743511995624" duration="12541000" />
       <workItem from="1743594240634" duration="4829000" />
       <workItem from="1744652278776" duration="795000" />
+      <workItem from="1744728381797" duration="2277000" />
+      <workItem from="1744730694263" duration="1201000" />
     </task>
     <task id="LOCAL-00001" summary="pu pu pu">
       <option name="closed" value="true" />

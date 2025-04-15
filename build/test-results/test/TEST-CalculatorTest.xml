@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CalculatorTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2025-04-15T15:46:09" hostname="GERGERICH" time="0.015">
+  <properties/>
+  <testcase name="testCalcHit[0]" classname="CalculatorTest" time="0.012"/>
+  <testcase name="testCalcHit[1]" classname="CalculatorTest" time="0.0"/>
+  <testcase name="testCalcHit[2]" classname="CalculatorTest" time="0.0"/>
+  <testcase name="testCalcHit[3]" classname="CalculatorTest" time="0.0"/>
+  <testcase name="testCalcHit[4]" classname="CalculatorTest" time="0.0"/>
+  <testcase name="testCalcHit[5]" classname="CalculatorTest" time="0.0"/>
+  <testcase name="testCalcHit[6]" classname="CalculatorTest" time="0.0"/>
+  <testcase name="testCalcHit[7]" classname="CalculatorTest" time="0.0"/>
+  <testcase name="testCalcHit[8]" classname="CalculatorTest" time="0.0"/>
+  <testcase name="testCalcHit[9]" classname="CalculatorTest" time="0.0"/>
+  <testcase name="testCalcHit[10]" classname="CalculatorTest" time="0.0"/>
+  <testcase name="testCalcHit[11]" classname="CalculatorTest" time="0.001"/>
+  <testcase name="testCalcHit[12]" classname="CalculatorTest" time="0.0"/>
+  <testcase name="testCalcHit[13]" classname="CalculatorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

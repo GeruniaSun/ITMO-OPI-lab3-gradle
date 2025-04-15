@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ValidatorTest" tests="21" skipped="0" failures="0" errors="0" timestamp="2025-04-15T15:46:09" hostname="GERGERICH" time="0.006">
+  <properties/>
+  <testcase name="testValidateForm[0]" classname="ValidatorTest" time="0.002"/>
+  <testcase name="testValidateForm[1]" classname="ValidatorTest" time="0.0"/>
+  <testcase name="testValidateForm[2]" classname="ValidatorTest" time="0.0"/>
+  <testcase name="testValidateForm[3]" classname="ValidatorTest" time="0.0"/>
+  <testcase name="testValidateForm[4]" classname="ValidatorTest" time="0.0"/>
+  <testcase name="testValidateForm[5]" classname="ValidatorTest" time="0.0"/>
+  <testcase name="testValidateForm[6]" classname="ValidatorTest" time="0.0"/>
+  <testcase name="testValidateForm[7]" classname="ValidatorTest" time="0.0"/>
+  <testcase name="testValidateForm[8]" classname="ValidatorTest" time="0.0"/>
+  <testcase name="testValidateForm[9]" classname="ValidatorTest" time="0.001"/>
+  <testcase name="testValidateForm[10]" classname="ValidatorTest" time="0.0"/>
+  <testcase name="testValidateForm[11]" classname="ValidatorTest" time="0.0"/>
+  <testcase name="testValidateForm[12]" classname="ValidatorTest" time="0.0"/>
+  <testcase name="testValidateForm[13]" classname="ValidatorTest" time="0.0"/>
+  <testcase name="testValidateForm[14]" classname="ValidatorTest" time="0.0"/>
+  <testcase name="testValidateForm[15]" classname="ValidatorTest" time="0.001"/>
+  <testcase name="testValidateForm[16]" classname="ValidatorTest" time="0.0"/>
+  <testcase name="testValidateForm[17]" classname="ValidatorTest" time="0.0"/>
+  <testcase name="testValidateForm[18]" classname="ValidatorTest" time="0.0"/>
+  <testcase name="testValidateForm[19]" classname="ValidatorTest" time="0.0"/>
+  <testcase name="testValidateForm[20]" classname="ValidatorTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
