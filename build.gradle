@@ -1,14 +1,19 @@
+import javax.xml.parsers.DocumentBuilderFactory
+import java.security.MessageDigest
+
 plugins {
     id 'java'
     id 'war'
+    id 'org.hidetake.ssh' version '2.10.1'
 }
 
 group = 'progLabs'
 version = ''
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(compileVersion)
+    }
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -19,12 +24,226 @@ tasks.withType(Javadoc).configureEach {
     options.encoding = 'UTF-8'
 }
 
-war {
-    archiveBaseName.set('WebLab3')
-}
-
 repositories {
     mavenCentral()
+}
+
+// настраиваем сервер для scp
+remotes {
+    helios {
+        port = 2222
+        host = remoteHost
+        user = remoteUser
+        password = remotePass
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+    }
+}
+
+tasks.register("compile") {
+    group = "lab"
+    description = "Компиляция исходных кодов проекта"
+
+    dependsOn(classes, tasks.compileJava)
+}
+
+build {
+    group = "lab"
+    description = "Компиляция исходных кодов и упаковка в jar"
+
+    dependsOn(tasks.compile)
+}
+
+clean {
+    group = "lab"
+    description = "Удаление скомпилированных классов проекта и всех временных файлов"
+}
+
+test {
+    group = "lab"
+    description = "Запуск junit-тестов проекта после сборки"
+}
+
+war {
+    manifest {
+        attributes(
+                'Manifest-Version': '1.0',
+                'Implementation-Version': version,
+                'Project-Checksum-SHA-256': calculateProjectChecksums()["SHA-256"],
+                'Project-Checksum-MD5': calculateProjectChecksums()["MD5"]
+        )
+    }
+}
+
+jar {
+    manifest {
+        attributes(
+                'Manifest-Version': '1.0',
+                'Implementation-Version': version,
+                'Project-Checksum-SHA-256': calculateProjectChecksums()["SHA-256"],
+                'Project-Checksum-MD5': calculateProjectChecksums()["MD5"]
+        )
+    }
+}
+
+tasks.register("doc") {
+    group = "lab"
+    description = "Генерация javadoc и добавление в MANIFEST.MF контрольных сумм MD5 и SHA-1"
+
+    dependsOn(tasks.javadoc, tasks.jar, tasks.war)
+}
+
+tasks.register("scp") {
+    group = "lab"
+    description = "Перемещение собранного проекта по scp на выбранный сервер по завершению сборки."
+
+    dependsOn(tasks.war)
+
+    doLast {
+        println "====== SCP STARTED ======"
+
+        ssh.run {
+            session(remotes.helios) {
+                put from: file("$warDir/$warName"), into: "~"
+            }
+        }
+
+        println "Project was successfully sent on server"
+        println "====== SCP COMPLETED ======"
+    }
+}
+
+tasks.register("xml") {
+    group = 'lab'
+    description = 'Валидация всех XML-файлов в проекте'
+
+    doLast {
+        println "====== XML STARTED ======"
+
+        def xmlFiles = fileTree(".") {
+            include '**/*.xml'
+        }
+
+        def factory = DocumentBuilderFactory.newInstance()
+        factory.setNamespaceAware(true)
+
+        xmlFiles.each { File xmlFile ->
+            try {
+                def builder = factory.newDocumentBuilder()
+                builder.parse(xmlFile)
+            } catch (Exception e) {
+                println "Error in xml: ${xmlFile} — ${e.message}"
+                throw new GradleException("XML validation failed for ${xmlFile}")
+            }
+        }
+
+        println "All XML files are valid."
+        println "====== XML COMPLETED ======"
+    }
+}
+
+tasks.register("env") {
+    group = "lab"
+    description = "Осуществляет сборку и запуск программы в альтернативных окружениях; " +
+            "окружение задается версией java и набором аргументов виртуальной машины в файле параметров."
+
+    dependsOn(tasks.build, tasks.war)
+
+    doLast {
+        println "====== ENV STARTED ======"
+
+        executeCommand("docker-compose down")
+        "docker-compose up --build".execute()
+
+        println "====== ENV COMPLETED ======"
+    }
+}
+
+tasks.register("history", Exec) {
+    group = 'lab'
+    description = "если проект не удаётся скомпилировать (цель compile), " +
+            "загружается предыдущая версия из репозитория git. Операция повторяется до тех пор, " +
+            "пока проект не удастся собрать, либо не будет получена самая первая ревизия из репозитория. " +
+            "Если такая ревизия найдена, то формируется файл, содержащий результат операции diff для всех файлов, " +
+            "измёненных в ревизии, следующей непосредственно за последней работающей."
+
+    commandLine "cmd", "/c", "ant", "history"
+    standardOutput = System.out
+    errorOutput = System.err
+
+    doFirst {
+        //println "====== HISTORY STARTED ======"
+    }
+
+    doLast {
+        commandLine.execute()
+        // println "====== HISTORY COMPLETED ======"
+    }
+}
+
+tasks.register("report") {
+    group = "lab"
+    description = "В случае успешного прохождения тестов сохраняет отчет junit в формате xml, " +
+            "добавляет его в репозиторий git и выполняет commit"
+
+    dependsOn(tasks.clean, tasks.test)
+
+    doLast {
+        println "====== REPORT STARTED ======"
+        reportsAdd(gitRepoDir, junitReportDir)
+        reportsCommit(gitRepoDir)
+        println "====== REPORT COMPLETED ======"
+    }
+}
+
+// выполнить команду в консоли
+static def executeCommand(String command, File dir = new File(".")) {
+    def process = command.execute(null, dir)
+    process.waitFor()
+
+//    if (process.exitValue() != 0) {
+//        println "Error executing command: $command"
+//        println "Error output: ${process.err.text}"
+//        throw new RuntimeException("Command failed: $command")
+//    }
+}
+
+// посчитать sha-256 и md5 контрольные суммы по проекту
+def calculateProjectChecksums() {
+    MessageDigest shaDigest = MessageDigest.getInstance("SHA-256")
+    MessageDigest mdDigest = MessageDigest.getInstance("MD5")
+
+    fileTree(dir: 'src/main/java', includes: ['**/*.java']).each { File file ->
+        shaDigest.update(file.bytes)
+        mdDigest.update(file.bytes)
+    }
+    return ["SHA-256": shaDigest.digest().encodeHex().toString(),
+            "MD5": mdDigest.digest().encodeHex().toString()]
+}
+
+// Функция для добавления junit-отчётов в индекс git
+def reportsAdd(String gitRepoDir, String junitReportDir) {
+    println "Adding reports to git..."
+
+    def command = "git add ${junitReportDir}/*.html"
+    executeCommand(command, new File(gitRepoDir))
+
+    println "Reports added"
+}
+
+// Функция для коммита junit-отчётов с отметкой времени
+def reportsCommit(String gitRepoDir) {
+    def commitTime = new Date().format("yyyy-MM-dd HH:mm:ss")
+    println "Committing reports..."
+    def command = "git commit -m \"JUnit Report ${commitTime}\""
+    executeCommand(command, new File(gitRepoDir))
+    println "Reports was commited"
 }
 
 dependencies {

@@ -1,0 +1,7 @@
+gradle.properties
+
+.gradle
+.idea
+
+diff.txt
+build

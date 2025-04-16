@@ -1,6 +1,6 @@
 FROM bitnami/wildfly:latest
 
-COPY target/WebLab3.war /opt/bitnami/wildfly/standalone/deployments/ROOT.war
+COPY build/libs/WebLab3.war /opt/bitnami/wildfly/standalone/deployments/ROOT.war
 COPY postgres-ds.xml /opt/bitnami/wildfly/standalone/deployments/
 COPY driver/postgresql-42.7.4.jar /opt/bitnami/wildfly/modules/org/postgresql/main/
 COPY driver/module.xml /opt/bitnami/wildfly/modules/org/postgresql/main/

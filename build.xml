@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="WebLab3">
+    <property file="build.properties"/>
+
+    <path id="classpath">
+        <fileset dir="${lib.dir}" includes="*.jar"/>
+        <fileset dir="${main.dir}" includes="*.java"/>
+    </path>
+
+    <!-- подключение моднейшего антконтриба-->
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties">
+        <classpath>
+            <pathelement location="${lib.dir}/ant-contrib-1.0b3.jar"/>
+        </classpath>
+    </taskdef>
+
+
+    <!-- ВНИМАНИЕ ТАРГЕТЫ!!!-->
+    <target name="clean">
+        <echo message="====== CLEAN STARTED ======" />
+        <delete dir="${target.dir}"/>
+        <echo message="====== CLEAN COMPLETED ======" />
+    </target>
+
+    <target name="compile" depends="clean">
+        <echo message="====== COMPILE STARTED ======" />
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${test.classes.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" classpathref="classpath" includeantruntime="false"/>
+        <echo message="====== COMPILE COMPLETED ======"/>
+    </target>
+
+    <target name="history">
+        <echo message="====== HISTORY STARTED ======"/>
+        <trycatch>
+            <try>
+                <antcall target="compile" inheritAll="true"/>
+                <echo message="CURRENT VERSION IS CORRECT!"/>
+            </try>
+            <catch>
+                <!-- ищем хешик первого коммита-->
+                <exec executable="git" outputproperty="first.rev" failonerror="true">
+                    <arg value="rev-list"/>
+                    <arg value="--max-parents=0"/>
+                    <arg value="HEAD"/>
+                </exec>
+                <property name="first.rev" value="${first.rev}.trim()"/>
+
+                <property name="lastWorking" value=""/>
+                <load-previous-version/>
+                <history-loop/>
+            </catch>
+        </trycatch>
+        <echo message="====== HISTORY COMPLETED ======"/>
+    </target>
+
+    <!-- тут мои макродефики(мракобесики)-->
+
+
+    <!-- проиндексировать репорты по junit тестам-->
+    <macrodef name="reports-add">
+        <sequential>
+            <exec executable="git" dir="${git.repo.dir}">
+                <arg value="add"/>
+                <arg value="${junit.report.dir}/*.txt"/>
+            </exec>
+        </sequential>
+    </macrodef>
+
+    <!-- закоммитить репорты-->
+    <macrodef name="reports-commit">
+        <sequential>
+            <tstamp>
+                <format property="commit.time" pattern="yyyy-MM-dd HH:mm:ss"/>
+            </tstamp>
+            <exec executable="git" dir="${git.repo.dir}">
+                <arg value="commit"/>
+                <arg value="-m"/>
+                <arg value="JUnit Report ${commit.time}"/>
+            </exec>
+        </sequential>
+    </macrodef>
+
+    <!-- рекурсивное выполнение таргета history-->
+    <macrodef name="history-loop">
+        <sequential>
+            <!-- получаем хешик текущего коммита -->
+            <exec executable="git" outputproperty="current.rev" failonerror="true">
+                <arg value="rev-parse"/>
+                <arg value="HEAD"/>
+            </exec>
+            <echo message="current revision: ${current.rev}"/>
+
+            <echo message="trying compile current revision..."/>
+            <trycatch>
+                <try>
+                    <antcall target="compile"/>
+
+                    <echo message="last working revision: ${current.rev}"/>
+                    <generate-diff/>
+                </try>
+                <catch>
+                    <if>
+                        <equals arg1="${current.rev}" arg2="${first.rev}"/>
+                        <then>
+                            <echo message="NO WORKING COMMITS IN YOUR REPO"/>
+                        </then>
+                        <else>
+                            <load-previous-version/>
+
+                            <history-loop/>
+                        </else>
+                    </if>
+                </catch>
+            </trycatch>
+        </sequential>
+    </macrodef>
+
+    <!-- сгенерировать diff файл последнего компилируемого коммита и следующего-->
+    <macrodef name="generate-diff">
+        <sequential>
+            <echo message="generation diff between last working and next..."/>
+            <exec executable="git" outputproperty="after.rev" failonerror="false">
+                <arg line="rev-parse HEAD^@"/>
+            </exec>
+
+            <exec executable="git" output="diff.txt" failonerror="false">
+                <arg value="diff"/>
+                <arg value="${current.rev}"/>
+                <arg value="${after.rev}"/>
+            </exec>
+            <echo message="diffs saved to diff.txt."/>
+        </sequential>
+    </macrodef>
+
+    <!-- загрузить версию из предыдущего коммита-->
+    <macrodef name="load-previous-version">
+        <sequential>
+            <echo message="checking out previous commit..."/>
+            <exec executable="git" failonerror="true">
+                <arg value="restore"/>
+                <arg value="--source"/>
+                <arg value="HEAD~1"/>
+                <arg value="--overlay"/>
+                <arg value="${src.dir}"/>
+            </exec>
+        </sequential>
+    </macrodef>
+</project>
