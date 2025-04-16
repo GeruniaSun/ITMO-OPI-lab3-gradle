@@ -110,7 +110,7 @@ tasks.register("scp") {
 
         ssh.run {
             session(remotes.helios) {
-                put from: file("$warDir/$warName"), into: "~"
+                put from: file("$warDir/$warName"), into: "."
             }
         }
 
